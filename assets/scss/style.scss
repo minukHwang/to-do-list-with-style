@@ -1,0 +1,106 @@
+body {
+    height: 100vh;
+    background-color: #f4f4f4;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .container{
+        height: 100vh;
+        max-width: 1000px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .title{
+        padding-top: 8px;
+        font-size: 36px;
+        font-weight: 700;
+        color: orange;
+    }
+    .input-area{
+        margin-top: 16px;
+        display: flex;
+        .input-box{
+            margin-right: 8px;
+            padding-left: 10px;
+            width: 30%;
+            border: 1px solid orange;
+            border-radius: 5px;
+            line-height: 32px;
+            transition: 0.5s;
+            &:focus{
+                outline: none;
+                width: 50%;
+            }
+
+        }
+        .input-button{
+            padding: 8px 16px;
+            white-space: nowrap;
+            border: none;
+            background-color: orange;
+            border-radius: 5px;
+            color: #f4f4f4;
+            &:hover{
+                background-color: orangered;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            }
+            &:focus{
+                outline: none;
+                // background-color: bisque;
+            }
+
+        }
+    }
+    .task-area{
+        border: 1px solid lightgrey;
+        margin-top: 16px;
+        .tab-list{
+            display: flex;
+            position: relative;
+            background-color: #fff;
+            border-bottom: 1px solid lightgrey;
+            .tab{
+                padding: 16px;
+                cursor: pointer;
+            }
+            .under-line{
+                position: absolute;
+                height: 4px;
+                width: 50.41px;
+                left: 0px;
+                top: 45px;
+                background-color: orange;
+                transition: 0.5s;
+            }
+        }
+        .todo-list{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .todo-text{
+                padding: 16px;
+                &.complete{
+                    text-decoration: line-through;
+                }
+            }
+            .todo-button-area{
+                display: flex;
+            }
+            .todo-button{
+                height: 56px;
+                width: 5em;
+                border: none;
+                background-color: #fff;
+                margin: 0;
+                &:first-child:hover{
+                    background-color: lightgreen;
+                }
+                &:last-child:hover{
+                    background-color: lightsalmon;
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+    }
+}
